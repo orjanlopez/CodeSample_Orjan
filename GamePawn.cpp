@@ -200,7 +200,7 @@ void AGamePawn::HandleCapsuleRotation()
 	}
 }
 
-// Called from UpdateCapsuleRotation
+// Called from HandleCapsuleRotation
 APlanet* AGamePawn::GetDominantPlanet()
 {
 	float StrongestGravitySize = 0.f;
