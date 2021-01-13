@@ -380,7 +380,6 @@ void AGamePawn::HandleSKRot()
 		}
 
 		// Calculate new roll based on movement velocity
-
 		FVector LocalVector = CharacterBody->GetForwardVector();
 		FRotator LocalRot = UKismetMathLibrary::MakeRotFromZ(LocalVector);
 		LocalVector = LocalRot.UnrotateVector(LocalVector);
