@@ -355,7 +355,7 @@ void AGamePawn::UpdatePlanetGravities(APlanet* Planet, FVector GravityForce)
 // Calculate local SK rotations based on forward direction of velocity
 void AGamePawn::HandleSKRot()
 {
-	if (CharacterBody)
+	if (CharacterBody && DominantPlanet)
 	{
 		// Calculate new SK yaw based on movement velocity
 		float NewYaw;
