@@ -184,9 +184,9 @@ void AGamePawn::UpdateSpringArmRotation()
 // Adds torque to keep the player capsule upright based on gravity of dominant planet
 void AGamePawn::HandleCapsuleRotation()
 {
-	if (bPlanetGravityInRange && Capsule)
+	DominantPlanet = GetDominantPlanet();
+	if (bPlanetGravityInRange && Capsule && DominantPlanet)
 	{
-		DominantPlanet = GetDominantPlanet(); 
 		FVector UpVector = GetActorUpVector();
 		UpVector = UKismetMathLibrary::NegateVector(UpVector);
 
